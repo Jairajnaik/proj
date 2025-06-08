@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Gallery Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: auto;
+            gap: 20px;
+        }
+        
+        .horizontal {
+            grid-column: span 2;
+            width: 100%;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .caption {
+            padding: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .horizontal {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center; margin-bottom: 20px;">My Art Showcase</h2>
+
+    <div class="gallery-grid">
+        <!-- Horizontal Images (Row 1) -->
+        <div class="gallery-item horizontal">
+            <img src="pic1.jpg" alt="Wide 1">
+            <div class="caption">Portrait (Horizontal)</div>
+        </div>
+        <div class="gallery-item horizontal">
+            <img src="pic2.jpg" alt="Wide 1">
+            <div class="caption">Portrait (Horizontal)</div>
+        </div>
+        <div class="gallery-item horizontal">
+            <img src="pic4.jpg" alt="Wide 2">
+            <div class="caption">Abstract Hands (Horizontal)</div>
+        </div>
+
+        <!-- Vertical Images (Row 2) -->
+        <div class="gallery-item">
+            <img src="pic3.jpg" alt="Vertical 1">
+            <div class="caption">Pink Flower</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic5.jpg" alt="Vertical 2">
+            <div class="caption">Yellow Flower</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic6.jpg" alt="Vertical 3">
+            <div class="caption">Wasp Drawing</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic7.jpg" alt="Vertical 4">
+            <div class="caption">Tiger Cub</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic8.jpg" alt="Vertical 4">
+            <div class="caption">Unknow</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
